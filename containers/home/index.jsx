@@ -13,7 +13,11 @@ const HomeContainer = ({ selectedCategory }) => {
     <div>
       <FeaturedMovie movie={Movies.results[0]} />
       <Categories categories={Category.genres.slice(0, 5)} />
-      <MoviesSection title="Popular Films" movies={selectedCategory?.movies} />
+{selectedCategory.movies.length > 0 && (
+  <MoviesSection title={Category.genres.find((genre=>genre.id.toString()===selectedCategory.id)).name} movies={selectedCategory?.movies} />
+)}
+
+      
       <MoviesSection
         title="Popular Films"
         movies={Movies.results.slice(1, 7)}

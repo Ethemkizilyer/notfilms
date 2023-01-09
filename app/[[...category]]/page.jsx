@@ -3,11 +3,13 @@ import React from "react";
 
 import Movies from "@/mocks/movies.json"
 
+async function delay(ms){
+    return new Promise((resolve)=>setTimeout(resolve,ms))
+}
 
-
-const HomePage = ({params}) => {
+const HomePage = async({params}) => {
     let selectedCategory;
-
+await delay(2000)
     if(params.category?.length > 0){
         selectedCategory=true
     }
