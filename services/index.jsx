@@ -9,7 +9,7 @@ async function fetchData(path, { query = "" } = {}) {
 
   try {
     const res = await fetch(
-      `${BASE_URL}${path}?api_key=d37aa81d99fd5b49201922d61ad5b2fd&${query}`
+      `${BASE_URL}${path}?api_key=${process.env.API_KEY}&${query}`
     );
     return res.json();
   } catch (error) {
