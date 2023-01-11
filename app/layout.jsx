@@ -1,21 +1,22 @@
-import {Inter} from "@next/font/google"
-import "@/styles/reset.css"
-import "@/styles/globals.css"
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import { Inter } from "@next/font/google";
 
-const interFontFamily = Inter({subsets: ["latin"]});
+import "@/styles/reset.css";
+import "@/styles/variables.css";
+import "@/styles/global.css";
 
-const RootLayout = ({ children }) => {
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+
+const interFontFamily = Inter({ subsets: ["latin"] });
+
+export default function RootLayout({ children }) {
   return (
-    <html lang="tr" className={interFontFamily.className}>
+    <html lang="en" className={interFontFamily.className}>
       <body className="container">
-        <Header/>
+        <Header />
         <main>{children}</main>
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

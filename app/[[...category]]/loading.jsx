@@ -1,18 +1,19 @@
-import CategoryLoading from '@/components/categories/loading'
-import { FeatureMovieLoading } from '@/components/featured-movie/loading';
-import { MoviesSectionLoading } from '@/components/movies-section/loading';
-import React from 'react'
+import React from "react";
 
+import { FeatureMovieLoading } from "@/components/featured-movie";
+import { CategoriesLoading } from "@/components/categories";
+import { MoviesSectionLoading } from "@/components/movies-section";
 
-
-const Loading = () => {
-  return( <div>
-    <FeatureMovieLoading/>
-    <CategoryLoading/>
-    <MoviesSectionLoading/>
-    <MoviesSectionLoading/>
-    <MoviesSectionLoading/>
-    </div>);
+function HomeLoading() {
+  return (
+    <>
+      <FeatureMovieLoading />
+      <CategoriesLoading />
+      <MoviesSectionLoading />
+      <MoviesSectionLoading />
+      <MoviesSectionLoading />
+    </>
+  );
 }
 
-export default Loading
+export default HomeLoading;

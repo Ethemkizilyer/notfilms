@@ -1,7 +1,9 @@
+import React from "react";
 import Link from "next/link";
+
 import styles from "./styles.module.css";
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className={styles.footer}>
       Made with 🔥 by&nbsp;
@@ -12,4 +14,4 @@ const Footer = () => {
   );
 }
 
-export default Footer;
+export { Footer };

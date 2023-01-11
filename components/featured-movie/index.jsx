@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaPlus } from "react-icons/fa";
@@ -38,5 +39,5 @@ function FeaturedMovie({ movie = {}, isCompact = true }) {
   );
 }
 
-
+export { FeatureMovieLoading } from "./loading";
 export { FeaturedMovie };

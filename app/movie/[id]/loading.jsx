@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Loading } from "@/components/loading";
+import { Skeleton } from "@/components/skeleton";
 
 function MovieLoading() {
   return (

@@ -1,8 +1,9 @@
+import React from "react";
 import Link from "next/link";
 
 import styles from "./styles.module.css";
 
-const Categories = ({ categories }) => {
+function Categories({ categories }) {
   return (
     <div className={styles.categories}>
       {categories.map((category) => (
@@ -16,6 +17,7 @@ const Categories = ({ categories }) => {
       ))}
     </div>
   );
-};
+}
 
-export default Categories;
+export { CategoriesLoading } from "./loading";
+export { Categories };

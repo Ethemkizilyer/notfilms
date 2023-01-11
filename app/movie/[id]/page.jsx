@@ -1,26 +1,21 @@
-import { MovieContainer } from "@/containers/movie";
 import { notFound } from "next/navigation";
-import { fetchSingleMovie } from "@/services/index";
-// async function delay(ms){
-//     return new Promise((resolve)=>setTimeout(resolve,ms))
-// }
+import React from "react";
+import { MovieContainer } from "@/containers/movie";
 
-const MoviePage = async ({ params, searchParams }) => {
-  console.log(params);
+import { fetchSingleMovie } from "@/services/index";
+
+async function MoviePage({ params, searchParams }) {
   const movieDetail = await fetchSingleMovie(params.id);
 
-  // await delay(2000)
-  // const movieDetail = Movies.results.find(
-  //   (movie) => movie.id.toString() === params.id
-  // );
-
-  if (!movieDetail) {
+  if (movieDetail.success === false) {
     notFound();
   }
+
   if (searchParams.error === "true") {
-    throw new Error("Error happened");
+    throw new Error("Something went wrong!");
   }
+
   return <MovieContainer movie={movieDetail} />;
-};
+}
 
 export default MoviePage;

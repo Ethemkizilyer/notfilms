@@ -1,4 +1,6 @@
-import HomeContainer from "@/containers/home";
+import React from "react";
+import { HomeContainer } from "@/containers/home";
+
 import {
   fetchPopularMovies,
   fetchTopRatedMovies,
@@ -6,13 +8,7 @@ import {
   fetchMoviesByGenre,
 } from "@/services/index";
 
-// import Movies from "@/mocks/movies.json"
-
-// async function delay(ms){
-//     return new Promise((resolve)=>setTimeout(resolve,ms))
-// }
-
-const HomePage = async ({ params }) => {
+async function HomePage({ params }) {
   const pagePromises = [
     fetchPopularMovies(),
     fetchTopRatedMovies(),
@@ -26,12 +22,6 @@ const HomePage = async ({ params }) => {
   const [popularMovies, topRatedMovies, genres, selectedCategoryMovies] =
     await Promise.all(pagePromises);
 
-  console.log(popularMovies);
-  let selectedCategory;
-  // await delay(2000)
-  // if(params.category?.length > 0){
-  //     selectedCategory=true
-  // }
   return (
     <HomeContainer
       categories={genres}
@@ -43,6 +33,6 @@ const HomePage = async ({ params }) => {
       }}
     />
   );
-};
+}
 
 export default HomePage;

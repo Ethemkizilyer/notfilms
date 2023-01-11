@@ -1,14 +1,15 @@
-import Link from "next/link"
-import {FaPlayCircle} from "react-icons/fa"
+import React from "react";
+import Link from "next/link";
+import { FaPlayCircle } from "react-icons/fa";
 
 import styles from "./styles.module.css";
 
-const Header = () => {
+function Header() {
   return (
     <header className={`${styles.header} container fluid`}>
       <div className={styles.headerWrapper}>
         <Link className={styles.logo} href="/">
-          <FaPlayCircle /> NOTFILMS
+          <FaPlayCircle /> NETFILMS
         </Link>
         <nav className={styles.navigationMenu}>
           <Link href="#">MOVIES</Link>
@@ -20,4 +21,4 @@ const Header = () => {
   );
 }
 
-export default Header
+export { Header };

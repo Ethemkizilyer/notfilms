@@ -1,9 +1,10 @@
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./styles.module.css";
 
-const MoviesSection=({ title, movies }) =>{
+function MoviesSection({ title, movies }) {
   return (
     <div className={styles.moviesSection}>
       <h3 className={styles.title}>{title}</h3>
@@ -25,5 +26,5 @@ const MoviesSection=({ title, movies }) =>{
   );
 }
 
-
-export default MoviesSection ;
+export { MoviesSectionLoading } from "./loading";
+export { MoviesSection };
