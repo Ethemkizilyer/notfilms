@@ -1,5 +1,5 @@
 import { MovieContainer } from "@/containers/movie";
-import { notFound, useSearchParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import { fetchSingleMovie } from "@/services/index";
 // async function delay(ms){
 //     return new Promise((resolve)=>setTimeout(resolve,ms))
