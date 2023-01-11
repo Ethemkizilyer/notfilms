@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import styles from "./styles.module.css";
 
-const Categories=({ categories })=> {
+const Categories = ({ categories }) => {
   return (
     <div className={styles.categories}>
       {categories.map((category) => (
@@ -17,7 +17,6 @@ const Categories=({ categories })=> {
       ))}
     </div>
   );
-}
+};
 
-
-export default Categories ;
+export default Categories;
