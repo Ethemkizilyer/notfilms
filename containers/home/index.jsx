@@ -2,7 +2,7 @@
 
 import { FeaturedMovie } from "@/components/featured-movie";
 import Categories from "@/components/categories";
-import { MoviesSection } from "@/components/movies-section";
+import  MoviesSection  from "@/components/movies-section";
 
 const HomeContainer = ({
   popularMovies,
