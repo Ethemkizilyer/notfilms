@@ -1,4 +1,3 @@
-import React from 'react'
 import Load from '../load'
 import styles from "./styles.module.css";
 
