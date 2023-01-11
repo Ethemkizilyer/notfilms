@@ -1,12 +1,12 @@
 import React from "react";
-import { Skeleton } from "@/components/skeleton";
+import {Loading} from "@/components/load";
 
 import styles from "./style.module.css";
 
 function FeatureMovieLoading() {
   return (
     <div style={{ height: 278 }} className={styles.movieWrapper}>
-      <Skeleton />
+      <Loading />
     </div>
   );
 }

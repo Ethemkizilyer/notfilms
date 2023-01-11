@@ -1,7 +1,12 @@
+import React from "react";
 import styles from "./styles.module.css";
 
-const Load=({ width, height }) =>{
-  return <div className={styles.load} style={{ width, height }}></div>;
+function Loading() {
+  return (
+    <div className={styles.loadingWrapper}>
+      <div className={styles.loading}></div>
+    </div>
+  );
 }
 
-export default  Load ;
+export { Loading };

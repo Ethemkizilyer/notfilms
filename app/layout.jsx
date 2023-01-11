@@ -7,7 +7,7 @@ import "@/styles/global.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
-const interFontFamily = Inter({ subsets: ["latin"] });
+const interFontFamily = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   return (
