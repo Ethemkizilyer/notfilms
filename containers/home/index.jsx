@@ -7,21 +7,26 @@ import Categories from '@/components/categories'
 import { MoviesSection } from '@/components/movies-section'
 
 
-const HomeContainer = ({ selectedCategory }) => {
+const HomeContainer = ({popularMovies=[], selectedCategory }) => {
   console.log(selectedCategory);
   return (
     <div>
-      <FeaturedMovie movie={Movies.results[0]} />
-      <Categories categories={Category.genres.slice(0, 5)} />
-{selectedCategory.movies.length > 0 && (
-  <MoviesSection title={Category.genres.find((genre=>genre.id.toString()===selectedCategory.id)).name} movies={selectedCategory?.movies} />
-)}
-
-      
-      <MoviesSection
-        title="Popular Films"
-        movies={Movies.results.slice(1, 7)}
+      <FeaturedMovie
+        movie={popularMovies[Math.floor(Math.random() * popularMovies.length)]}
       />
+      <Categories categories={Category.genres.slice(0, 5)} />
+      {selectedCategory.movies.length > 0 && (
+        <MoviesSection
+          title={
+            Category.genres.find(
+              (genre) => genre.id.toString() === selectedCategory.id
+            ).name
+          }
+          movies={selectedCategory?.movies}
+        />
+      )}
+
+      <MoviesSection title="Popular Films" movies={popularMovies.slice(1, 7)} />
       <MoviesSection
         title="Your Favourites"
         movies={Movies.results.slice(7, 13)}
